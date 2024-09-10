@@ -1,0 +1,20 @@
+@startuml
+sprite eventIcon <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="8px" viewBox="0 0 8 8" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:black;fill-opacity:1;" d="M 2.21875 7.445312 L 3.375 5.117188 L 0.617188 4.757812 L 5.035156 0.554688 L 5.8125 0.554688 L 4.597656 2.9375 L 7.382812 3.285156 L 2.992188 7.445312 Z M 2.21875 7.445312 "/>
+</g>
+</svg>
+
+sprite storageIcon <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+                   <g id="surface1">
+                   <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 11.332031 10.667969 C 11.609375 10.667969 11.847656 10.570312 12.042969 10.382812 C 12.234375 10.195312 12.332031 9.957031 12.332031 9.667969 C 12.332031 9.390625 12.234375 9.152344 12.042969 8.957031 C 11.847656 8.765625 11.609375 8.667969 11.332031 8.667969 C 11.042969 8.667969 10.804688 8.765625 10.617188 8.957031 C 10.429688 9.152344 10.332031 9.390625 10.332031 9.667969 C 10.332031 9.957031 10.429688 10.195312 10.617188 10.382812 C 10.804688 10.570312 11.042969 10.667969 11.332031 10.667969 Z M 1.332031 6 L 3.601562 3.734375 C 3.722656 3.609375 3.863281 3.515625 4.023438 3.441406 C 4.1875 3.371094 4.359375 3.332031 4.550781 3.332031 L 11.433594 3.332031 C 11.621094 3.332031 11.796875 3.371094 11.957031 3.441406 C 12.121094 3.515625 12.261719 3.609375 12.382812 3.734375 L 14.667969 6 Z M 2.667969 12.667969 C 2.289062 12.667969 1.972656 12.539062 1.714844 12.285156 C 1.460938 12.027344 1.332031 11.710938 1.332031 11.332031 L 1.332031 7.332031 L 14.667969 7.332031 L 14.667969 11.332031 C 14.667969 11.710938 14.535156 12.027344 14.273438 12.285156 C 14.015625 12.539062 13.699219 12.667969 13.332031 12.667969 Z M 2.667969 12.667969 "/>
+                   </g>
+                   </svg>
+
+!define DATA_EVENT(eventAlias, dataEventName) rectangle dataEventName as eventAlias <<$eventIcon*2>>
+!define DATA_STORAGE(storageAlias, dataStorageName) rectangle dataStorageName as storageAlias <<$storageIcon>>
+!define DATA_PROCESS(alias, process) component process as alias
+!define DATA_CONTEXT(contextName) frame "contextName" #line.dashed
+!define DATA_IN(portName) portin " " as portName #blue
+!define DATA_OUT(portName) portout " " as portName #green
+@enduml
