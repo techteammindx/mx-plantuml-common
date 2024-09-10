@@ -13,7 +13,7 @@ sprite storageIcon <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://w
 
 !define DATA_EVENT(eventAlias, dataEventName) rectangle dataEventName as eventAlias <<$eventIcon*2>>
 !define DATA_STORAGE(storageAlias, dataStorageName) rectangle dataStorageName as storageAlias <<$storageIcon>>
-!define DATA_PROCESS(alias, process) component process as alias
+!define WORKER_PROCESS(alias, process) component process as alias
 !define DATA_CONTEXT(contextName) frame "contextName" #line.dashed
 !define DATA_IN(portName) portin " " as portName #blue
 !define DATA_OUT(portName) portout " " as portName #green
