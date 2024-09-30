@@ -1,0 +1,37 @@
+@startuml
+title "Product Usage Context"
+allowmixing
+!include ./DataStreaming.puml
+
+entity ProductItem {
+    id: string
+    name: string
+    price: string
+    customerId: string
+}
+
+object StudentWithFinishTime {
+    id: string
+    finishTime: string
+}
+
+object CustomerUsageFinishTime {
+    id: string
+    finishTime: string
+}
+
+entity "CustomerUsageFinishTime" as CustomerUsageFinishTimeEntity {
+    id: string
+    finishTime: string
+}
+
+package "Customer Usage Finish Time Transformer" #line.dashed {
+    METHOD(process)
+}
+
+StudentWithFinishTime ..> process
+ProductItem ..> process
+process --> CustomerUsageFinishTimeEntity
+process ..> CustomerUsageFinishTime
+
+@enduml
