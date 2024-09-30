@@ -7,6 +7,7 @@ sprite businessProcessIcon <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="
 !define DATA_STORAGE(storageAlias, dataStorageName) rectangle dataStorageName as storageAlias <<$storageIcon>>
 !define METHOD(methodName) rectangle methodName <<$businessProcessIcon>>
 !define WORKER_PROCESS(alias, process) component process as alias
+!define WORKER(workerName) package "workerName" #line.dashed
 !define DATA_CONTEXT(contextName) frame "contextName" #line.dashed
 !define DATA_IN(portName) portin " " as portName #blue
 !define DATA_OUT(portName) portout " " as portName #green
